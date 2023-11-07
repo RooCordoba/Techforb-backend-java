@@ -1,17 +1,32 @@
-package com.ar.techforb.models;
+package com.ar.techforb.db;
 
+import jakarta.persistence.*;
 
-public class User {
+@Entity
+@Table
+public class DB_User {
 
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
     private String apellido;
     private String password;
+
+    @Column(unique = true)
     private Integer dni;
     private Integer celular;
     private Boolean is_logged_in;
+
+    public DB_User(){}
+    public DB_User(String nombre, String apellido, String password, Integer dni, Integer celular) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.password = password;
+        this.dni = dni;
+        this.celular = celular;
+        this.is_logged_in = false;
+    }
 
     public String getNombre() {
         return nombre;
@@ -61,12 +76,5 @@ public class User {
         this.is_logged_in = is_logged_in;
     }
 
-    public User(String nombre, String apellido, String password, Integer dni, Integer celular, Boolean is_logged_in) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.password = password;
-        this.dni = dni;
-        this.celular = celular;
-        this.is_logged_in = is_logged_in;
-    }
+
 }
