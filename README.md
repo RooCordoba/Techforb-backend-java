@@ -26,6 +26,7 @@ Simula el manejo de un sistema Bancario, con creacion de Usuarios en Base de dat
 
 ## Prerequisitos
 
+* Tener [Git](https://git-scm.com/) instalado
 * Tener instalado [java jdk](https://jdk.java.net/) (el proyecto usa la version 20)
 * Tener instalado [Apache Maven](https://maven.apache.org/download.cgi)
 
