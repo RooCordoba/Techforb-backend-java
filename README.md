@@ -69,3 +69,7 @@ Se iniciara el programa en [localhost:8080/swagger-ui/index](http://localhost:80
 * Maven
 * Springdoc-openapi (para una interfaz mas amigable al usuario para interactuar con los endpoints)
 * PostgreSQL (manejo de la base de datos)
+
+### Imagenes de muestra del proyecto
+
+![Image Text](https://github.com/RooCordoba/Techforb-backend-java/blob/develop/src/main/java/com/ar/techforb/imagenes-github/Endpoints-imagen.png)
