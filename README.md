@@ -27,8 +27,8 @@ Simula el manejo de un sistema Bancario, con creacion de Usuarios en Base de dat
 ## Prerequisitos
 
 * Tener [Git](https://git-scm.com/) instalado
-* Tener instalado [java jdk](https://jdk.java.net/) (el proyecto usa la version 20)
-* Tener instalado [Apache Maven](https://maven.apache.org/download.cgi)
+* Tener instalado [java jdk](https://www.oracle.com/java/technologies/downloads/#java8) (el proyecto usa la version 20) ([video de ayuda](https://www.youtube.com/watch?v=kPWezAZGPks))
+* Tener instalado [Apache Maven](https://maven.apache.org/download.cgi) ([video de ayuda](https://www.youtube.com/watch?v=T4-nYT5ubK8))
 
 * Instalar [postgreSQL](https://www.postgresql.org/download/):
    * En la instalacion, dejar el puerto 5432, usuario: postgres y contraseña 1234.
