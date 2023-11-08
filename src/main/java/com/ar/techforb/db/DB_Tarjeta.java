@@ -3,7 +3,6 @@ package com.ar.techforb.db;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 
-import static java.lang.Math.round;
 
 @Table
 @Entity

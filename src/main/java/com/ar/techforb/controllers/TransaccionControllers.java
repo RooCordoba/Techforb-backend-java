@@ -43,8 +43,7 @@ public class TransaccionControllers {
     public ResponseEntity<Object> extraer_dinero(Integer dni,
                                                    String password,
                                                    Float monto_a_extraer,
-                                                   Long tarjeta_id,
-                                                   Long cbu_destino){
+                                                   Long tarjeta_id){
         if (userServices.userExist(dni)){
             return transaccionServices.extraer(dni, password, monto_a_extraer, tarjeta_id);
         } else {
