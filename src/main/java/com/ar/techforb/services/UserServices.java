@@ -62,10 +62,15 @@ public class UserServices {
         return true;
     }
 
+    public Boolean coincidenCredenciales(Integer dni, String password){
+        Optional<DB_User> user = usersRepository.findUserByDni(dni);
+        return user.get().getPassword().equals(password);
+    }
+
     public ResponseEntity<Object> iniciarSesion(Integer dni, String password){
         try{
             Optional<DB_User> user = usersRepository.findUserByDni(dni);
-            if(user.get().getPassword().equals(password)){
+            if(coincidenCredenciales(dni, password)){
                 user.get().setIs_logged_in(true);
                 usersRepository.save(user.get());
                 return new ResponseEntity<>("Inicio de sesion correcto!",HttpStatus.OK);

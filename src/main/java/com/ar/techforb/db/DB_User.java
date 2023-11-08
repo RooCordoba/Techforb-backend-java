@@ -23,11 +23,12 @@ public class DB_User {
             defaultValue = "password")
     private String password;
 
-    @Column(unique = true)
+    @Column(name = "dni",unique = true)
     @Schema(description = "Dni del usuario",
             required = true,
             defaultValue = "dni")
     private Integer dni;
+
     @Schema(description = "Celular del usuario",
             defaultValue = "celular")
     private Integer celular;
@@ -41,6 +42,10 @@ public class DB_User {
         this.dni = dni;
         this.celular = celular;
         this.is_logged_in = false;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getNombre() {
