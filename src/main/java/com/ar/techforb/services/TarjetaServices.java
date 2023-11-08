@@ -21,11 +21,6 @@ public class TarjetaServices {
     private final UserServices userServices;
     private final UsersRepository usersRepository;
 
-    //@Autowired
-//    public void UserControllers(UserServices userServices){
-//        this.userServices = userServices;
-//    }
-
     @Autowired
     public TarjetaServices(TarjetaRepository tarjetaRepository,
                            UserServices userServices,
@@ -79,7 +74,7 @@ public class TarjetaServices {
                 return new ResponseEntity<>("Contraseña Incorrecta",HttpStatus.BAD_REQUEST);
             }
         } catch (Exception e){
-        throw new RuntimeException(e.getMessage());
+            throw new RuntimeException(e.getMessage());
         }
     }
 

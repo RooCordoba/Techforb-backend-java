@@ -16,4 +16,5 @@ public interface TarjetaRepository extends JpaRepository<DB_Tarjeta, Long> {
     List<DB_Tarjeta> findTarjetasByUser_id(Long user_id);
 
     Optional<DB_Tarjeta> findTarjetaById(Long id);
+
 }

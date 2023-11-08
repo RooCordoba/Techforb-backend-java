@@ -6,10 +6,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(path = "api/v1/tarjetas")
@@ -48,7 +45,7 @@ public class TarjetaControllers {
     }
 
     @Operation(summary = "Elimina una tarjeta del user")
-    @GetMapping(path = "/eliminar_tarjeta")
+    @DeleteMapping(path = "/eliminar_tarjeta")
     public ResponseEntity<Object> eliminar_tarjeta( Integer dni,
                                                     String password,
                                                     Long id_de_tarjeta
