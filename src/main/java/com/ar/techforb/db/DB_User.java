@@ -1,5 +1,6 @@
 package com.ar.techforb.db;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 
 @Entity
@@ -9,12 +10,26 @@ public class DB_User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Schema(description = "Nombre del usuario",
+            required = true,
+            defaultValue = "nombre")
     private String nombre;
+    @Schema(description = "Apellido del usuario",
+            required = true,
+            defaultValue = "apellido")
     private String apellido;
+    @Schema(description = "Password del usuario",
+            required = true,
+            defaultValue = "password")
     private String password;
 
     @Column(unique = true)
+    @Schema(description = "Dni del usuario",
+            required = true,
+            defaultValue = "dni")
     private Integer dni;
+    @Schema(description = "Celular del usuario",
+            defaultValue = "celular")
     private Integer celular;
     private Boolean is_logged_in;
 

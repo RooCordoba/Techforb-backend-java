@@ -9,5 +9,6 @@ import java.util.Optional;
 @Repository //me permite trabajar desde services con la base de datos
 public interface UsersRepository extends JpaRepository<DB_User, Long> {
 
+    // me permite interactuar con la base de datos
     Optional<DB_User> findUserByDni(Integer dni);
 }
